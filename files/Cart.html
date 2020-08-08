@@ -1,0 +1,57 @@
+<div class="row">
+    <div role="dialog" tabindex="-1" class="modal fade" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">One last step</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <!--<label class="col-12">Email: </label>-->
+                    <input type="text" placeholder="Email" class="col-10" style="margin: 10px" ng-model="reqer.email">
+                    <!--<label class="col-12">Location: </label>-->
+                    <input type="text" placeholder="Location" class="col-10" style="margin: 10px" ng-model="reqer.location">
+                    <!--<label class="col-12">Other Info: </label>-->
+                    <textarea rows="4" cols="50" class="col-10" style="margin: 10px" placeholder="Add any other information that may be needed for this request" ng-model="reqer.other"></textarea>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button" ng-click="send_requests()">Send Request</button><button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-7">
+        <h1>My Requests&nbsp;<i class="fa fa-shopping-cart"></i>&nbsp;:</h1>
+    </div>
+    <div class="col-12 col-sm-5 col-md-3 offset-md-2"><button class="btn btn-primary btn-block" type="button" ng-click="check_requests()">Send Request</button></div><!--send_requests()-->
+    <div class="col-12">
+        <hr>
+        <div class="row">
+            <!--<div class="col-md-6 col-lg-4 col-xl-3" style="margin-top: 15px;">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Item Name</h5>
+                    </div>
+                    <div class="card-body"><img class="img-fluid rounde" src="assets/img/aesfsdf.png"><button class="btn btn-primary btn-block dropped" type="button" ng-click="clear()">Add</button></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3" style="margin-top: 15px;">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Item Name</h5>
+                    </div>
+                    <div class="card-body"><img class="img-fluid rounde" src="assets/img/aesfsdf.png"><button class="btn btn-primary btn-block dropped" type="button" ng-click="add()">Add</button></div>
+                </div>
+            </div>-->
+            <div ng-if="cart.length == 0" class="col-12" style="text-align: center; vertical-align: middle;">
+                <h1>Cart is currently empty!</h1>
+                <h2>Go add some stuff!</h2>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3" style="margin-top: 15px;" ng-repeat="x in cart track by $index">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">{{x.title}}</h5>
+                    </div>
+                    <div class="card-body"><div class="img-fluid rounde" style="background-image:url('{{x.img}}'); background-size: cover; background-position:center; background-repeat: no-repeat; height:500px;"></div><button class="btn btn-primary btn-block dropped" type="button" ng-click="remove($index)">Remove</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Outreach inventory</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="./assets/js/code.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#">Outreach Inventory</a></li>
+                <li><a href="#/List/Book_Sets">Book Sets</a></li>
+                <li><a href="#/List/Book_Kits">Book Storytime Kits</a></li>
+                <li><a href="#/List/Costumes">Costumes</a></li>
+                <li><a href="#/List/Craft_Supplies">Craft Supplies</a></li>
+                <li><a href="#/List/Games">Games</a></li>
+                <li><a href="#/List/Board_Games">Giant Board Games</a></li>
+                <li><a href="#/List/Instruments">Instruments</a></li>
+                <li><a href="#/List/Puppets">Puppets</a></li>
+                <li><a href="#/List/Tech_Toys">Tech Toys</a></li>
+            </ul>
+            <hr>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row" ng-controller="data_get">
+                    <div class="col"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a></div>
+                    <div class="col text-right"><a href="#/Cart"><button class="btn btn-link" type="button"><i class="fa fa-shopping-cart" style="margin-right: 3px;"></i><span class="badge badge-pill badge-primary">{{cartTotal}}</span></button></a></div>
+                </div>
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

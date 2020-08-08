@@ -1,0 +1,21 @@
+{
+  "name": "Outreach_Inventory_manager",
+  "version": "1.0.0",
+  "description": "Outreach inventory for Elyria Public library",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Benjamin Cuson",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "fs": "0.0.1-security",
+    "mysql": "^2.17.1",
+    "nodemailer": "~0.7.1",
+    "sharp": "^0.21.3",
+    "socket.io": "~1.2.0"
+  }
+}
